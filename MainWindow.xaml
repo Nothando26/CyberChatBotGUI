@@ -1,0 +1,70 @@
+﻿<Window x:Class="CyberChatBotPOEPart1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cyber ChatBot"
+        Height="650" Width="1100"
+        WindowStartupLocation="CenterScreen"
+        Background="LightPink">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- greeting -->
+            <RowDefinition Height="*"/>
+            <!-- chat output -->
+            <RowDefinition Height="Auto"/>
+            <!-- input area -->
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="GreetingTextBlock"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Foreground="HotPink"
+                   HorizontalAlignment="Center"
+                   Margin="0,10"/>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,5">
+            <TextBlock x:Name="OutputTextBlock"
+                       TextWrapping="Wrap"
+                       FontSize="16"
+                       Foreground="DeepPink"
+                       Background="WhiteSmoke"
+                       Padding="10"/>
+        </ScrollViewer>
+
+        <!-- Input area: TextBox and Button aligned right -->
+        <Grid Grid.Row="2" Margin="0,10,0,0" Background="LightGray" Height="40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <!-- Push content to the right -->
+                <ColumnDefinition Width="460"/>
+                <!-- TextBox width -->
+                <ColumnDefinition Width="110"/>
+                <!-- Button width + margin -->
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="UserInputBox"
+                     Grid.Column="1"
+                     Width="460"
+                     Height="35"
+                     FontSize="16"
+                     Padding="5"
+                     BorderBrush="#E91E63"
+                     BorderThickness="2"
+                     Background="White"
+                     VerticalContentAlignment="Center"/>
+
+            <Button x:Name="SubmitButton"
+                    Grid.Column="2"
+                    Content="Send"
+                    Width="100"
+                    Height="35"
+                    Margin="10,0,0,0"
+                    Background="#F06292"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    BorderThickness="0"
+                    Click="SubmitButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>
