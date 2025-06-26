@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\lab_services_student\Desktop\PROG6221_POE\CyberChatBotPOEGUI\obj\Debug\net9.0-windows\
+C:\Users\lab_services_student\Desktop\PROG6221_POEFINAL\CyberChatBotPOEGUI\obj\Debug\net9.0-windows\
 CyberChatBotPOEGUI
 none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
-C:\Users\lab_services_student\Desktop\PROG6221_POE\CyberChatBotPOEGUI\App.xaml
-2903738624
+C:\Users\lab_services_student\Desktop\PROG6221_POEFINAL\CyberChatBotPOEGUI\App.xaml
+3-906881641
 
-5249834820
+6-1654800194
 200161758370
-MainWindow.xaml;WelcomeWindow.xaml;
+AddTaskWindow.xaml;MainWindow.xaml;WelcomeWindow.xaml;
 
 False
 

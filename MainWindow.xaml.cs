@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace CyberChatBotPOEPart1
 {
@@ -86,10 +85,7 @@ namespace CyberChatBotPOEPart1
 
         private string userName;
 
-        // Task structure includes Title, Description, DueDate, and Completion status
-        private List<TaskItem> tasks = new List<TaskItem>();
-
-        // Reminders structure (message and due time)
+        // Reminder structure (message and due time)
         private List<(string Message, DateTime DueTime)> reminders = new List<(string, DateTime)>();
 
         public MainWindow(string userName)
@@ -106,6 +102,14 @@ namespace CyberChatBotPOEPart1
 
             Log($"> {input}");
 
+            // Show activity log command
+            if (input.ToLower().Contains("show") && input.ToLower().Contains("activity log"))
+            {
+                ShowActivityLog();
+                UserInputBox.Clear();
+                return;
+            }
+
             if (inQuizMode)
             {
                 HandleQuizAnswer(input);
@@ -114,7 +118,7 @@ namespace CyberChatBotPOEPart1
             {
                 if (input.ToLower().Contains("learn more"))
                 {
-                    Log($"Here's some more detailed info on {lastCyberTopic}: [Add detailed info here or link resources!]");
+                    Log($"Here's some more detailed info on {lastCyberTopic}");
                     waitingForCyberChoice = false;
                 }
                 else if (input.ToLower().Contains("quiz"))
@@ -124,33 +128,24 @@ namespace CyberChatBotPOEPart1
                 }
                 else
                 {
-                    Log("Please type 'learn more' to get details or 'quiz' to start a quiz.");
+                    Log("Please type 'learn more' to get details or 'quiz' to start the quiz.");
                 }
             }
             else if (input.ToLower().StartsWith("add task"))
             {
-                if (!HandleAddTask(input))
-                {
-                    Log("❌ Invalid task format. Use: add task: [title], description: [desc], due: [yyyy-MM-dd] or 'none' for no due date, optionally add reminder: [in X days/hours/minutes]");
-                }
+                OpenTaskWindow();
             }
             else if (input.ToLower() == "view tasks")
             {
-                ShowTasks();
+                Log("To view tasks, please open the Tasks window.");
             }
             else if (input.ToLower().StartsWith("delete task"))
             {
-                if (!HandleDeleteTask(input))
-                {
-                    Log("❌ To delete a task, type: delete task [task number]");
-                }
+                Log("Task deletion must be done from the Tasks window.");
             }
             else if (input.ToLower().StartsWith("complete task"))
             {
-                if (!HandleCompleteTask(input))
-                {
-                    Log("❌ To mark a task complete, type: complete task [task number]");
-                }
+                Log("Marking tasks complete must be done from the Tasks window.");
             }
             else if (input.ToLower().Contains("quiz"))
             {
@@ -158,7 +153,7 @@ namespace CyberChatBotPOEPart1
             }
             else if (MatchReminder(input))
             {
-                // Reminder handled inside MatchReminder
+                // Reminder matched and logged inside MatchReminder
             }
             else
             {
@@ -167,7 +162,7 @@ namespace CyberChatBotPOEPart1
                 {
                     lastCyberTopic = matchedCyberKeyword;
                     Log("💡 " + cybersecurityExplanations[matchedCyberKeyword]);
-                    Log("Would you like to learn more about this topic or take a quiz? (Type 'learn more' or 'quiz')");
+                    Log("Would you like to learn more about this topic? Type 'learn more' or 'quiz' to start a quiz.");
                     waitingForCyberChoice = true;
                 }
                 else if (MatchEmotion(input))
@@ -189,6 +184,36 @@ namespace CyberChatBotPOEPart1
             }
 
             UserInputBox.Clear();
+        }
+
+        private void ShowActivityLog()
+        {
+            if (activityLog.Count == 0)
+            {
+                Log("Your activity log is empty.");
+                return;
+            }
+
+            Log("📜 Here's your activity log:");
+            foreach (string entry in activityLog)
+            {
+                OutputTextBlock.Text += entry + "\n";
+            }
+        }
+
+        private void OpenTaskWindow()
+        {
+            try
+            {
+                AddTaskWindow taskWindow = new AddTaskWindow();
+                taskWindow.Owner = this;
+                taskWindow.ShowDialog();
+                Log("Opened the Task Manager window.");
+            }
+            catch (Exception ex)
+            {
+                Log($"❌ Failed to open Task window: {ex.Message}");
+            }
         }
 
         private void Log(string message)
@@ -276,7 +301,7 @@ namespace CyberChatBotPOEPart1
 
         private bool MatchReminder(string input)
         {
-            // Example: "remind me in 3 days to backup files"
+            // Use regex to find "remind me in X units to Y" anywhere in the string, case-insensitive
             Match match = Regex.Match(input.ToLower(), @"remind me in (\d+) (seconds|minutes|hours|days|weeks) to (.+)");
             if (match.Success)
             {
@@ -300,143 +325,5 @@ namespace CyberChatBotPOEPart1
             }
             return false;
         }
-
-        // Handles adding tasks with optional reminders
-        private bool HandleAddTask(string input)
-        {
-            // Accept input like:
-            // add task: Buy groceries, description: Buy milk and eggs, due: 2025-07-01, reminder: in 2 days
-            // or missing parts
-
-            // Parse with Regex for optional fields
-            var regex = new Regex(@"add task: (?<title>[^,]+), description: (?<desc>[^,]+), due: (?<due>[^,]+)(, reminder: (?<reminder>.+))?", RegexOptions.IgnoreCase);
-            var match = regex.Match(input);
-
-            if (!match.Success) return false;
-
-            string title = match.Groups["title"].Value.Trim();
-            string desc = match.Groups["desc"].Value.Trim();
-            string dueStr = match.Groups["due"].Value.Trim();
-            string reminderStr = match.Groups["reminder"].Value.Trim();
-
-            DateTime? dueDate = null;
-            if (!string.Equals(dueStr, "none", StringComparison.OrdinalIgnoreCase))
-            {
-                if (!DateTime.TryParse(dueStr, out DateTime parsedDue))
-                {
-                    Log("❌ Invalid due date format. Use yyyy-MM-dd or 'none'.");
-                    return true; // We handled it by showing error
-                }
-                dueDate = parsedDue;
-            }
-
-            tasks.Add(new TaskItem(title, desc, dueDate, false));
-            Log($"✅ Task added: {title} - {desc} {(dueDate.HasValue ? $"(Due: {dueDate.Value.ToShortDateString()})" : "")}");
-
-            // Handle reminder if provided
-            if (!string.IsNullOrEmpty(reminderStr))
-            {
-                // Example reminderStr: "in 2 days", "in 5 hours"
-                var remMatch = Regex.Match(reminderStr.ToLower(), @"in (\d+) (seconds|minutes|hours|days|weeks)");
-                if (remMatch.Success)
-                {
-                    int qty = int.Parse(remMatch.Groups[1].Value);
-                    string unit = remMatch.Groups[2].Value;
-
-                    DateTime due = DateTime.Now;
-                    switch (unit)
-                    {
-                        case "seconds": due = due.AddSeconds(qty); break;
-                        case "minutes": due = due.AddMinutes(qty); break;
-                        case "hours": due = due.AddHours(qty); break;
-                        case "days": due = due.AddDays(qty); break;
-                        case "weeks": due = due.AddDays(qty * 7); break;
-                    }
-
-                    reminders.Add(($"Task reminder: {title}", due));
-                    Log($"⏰ Reminder set for task '{title}' in {qty} {unit}.");
-                }
-                else
-                {
-                    Log("❌ Could not parse reminder time. Use 'in X days/hours/minutes'.");
-                }
-            }
-
-            return true;
-        }
-
-        private void ShowTasks()
-        {
-            if (tasks.Count == 0)
-            {
-                Log("📋 No tasks available.");
-                return;
-            }
-
-            Log("📋 Your tasks:");
-            for (int i = 0; i < tasks.Count; i++)
-            {
-                var t = tasks[i];
-                Log($"{i + 1}. {(t.IsComplete ? "✔️" : "❌")} {t.Title} - {t.Description}" +
-                    (t.DueDate.HasValue ? $" (Due: {t.DueDate.Value.ToShortDateString()})" : ""));
-            }
-        }
-
-        private bool HandleDeleteTask(string input)
-        {
-            // input format: delete task 2
-            var regex = new Regex(@"delete task (\d+)", RegexOptions.IgnoreCase);
-            var match = regex.Match(input);
-            if (!match.Success) return false;
-
-            int idx = int.Parse(match.Groups[1].Value) - 1;
-            if (idx < 0 || idx >= tasks.Count)
-            {
-                Log("❌ Invalid task number.");
-                return true;
-            }
-
-            var removed = tasks[idx];
-            tasks.RemoveAt(idx);
-            Log($"🗑️ Deleted task: {removed.Title}");
-            return true;
-        }
-
-        private bool HandleCompleteTask(string input)
-        {
-            // input format: complete task 1
-            var regex = new Regex(@"complete task (\d+)", RegexOptions.IgnoreCase);
-            var match = regex.Match(input);
-            if (!match.Success) return false;
-
-            int idx = int.Parse(match.Groups[1].Value) - 1;
-            if (idx < 0 || idx >= tasks.Count)
-            {
-                Log("❌ Invalid task number.");
-                return true;
-            }
-
-            tasks[idx].IsComplete = true;
-            Log($"✅ Marked task as complete: {tasks[idx].Title}");
-            return true;
-        }
-
-        // Task data structure
-        private class TaskItem
-        {
-            public string Title { get; }
-            public string Description { get; }
-            public DateTime? DueDate { get; }
-            public bool IsComplete { get; set; }
-
-            public TaskItem(string title, string desc, DateTime? dueDate, bool isComplete)
-            {
-                Title = title;
-                Description = desc;
-                DueDate = dueDate;
-                IsComplete = isComplete;
-            }
-        }
     }
 }
-

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CyberChatBotPOEGUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58a5a2a49228957d23a5fdea88870530a1aafdfd")]
 [assembly: System.Reflection.AssemblyProductAttribute("CyberChatBotPOEGUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CyberChatBotPOEGUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

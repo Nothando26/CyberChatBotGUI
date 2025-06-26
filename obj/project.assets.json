@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\CyberChatBotPOEGUI.csproj",
+      "projectUniqueName": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\CyberChatBotPOEGUI.csproj",
       "projectName": "CyberChatBotPOEGUI",
-      "projectPath": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\CyberChatBotPOEGUI.csproj",
+      "projectPath": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\CyberChatBotPOEGUI.csproj",
       "packagesPath": "C:\\Users\\lab_services_student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\obj\\",
+      "outputPath": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

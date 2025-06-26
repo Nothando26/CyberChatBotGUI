@@ -1,26 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\",
+  "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poe\\cyberchatbotpoegui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poe\\cyberchatbotpoegui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poefinal\\cyberchatbotpoegui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poe\\cyberchatbotpoegui\\welcomewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|solutionrelative:welcomewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poe\\cyberchatbotpoegui\\welcomewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poefinal\\cyberchatbotpoegui\\welcomewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|solutionrelative:welcomewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poe\\cyberchatbotpoegui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poefinal\\cyberchatbotpoegui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poefinal\\cyberchatbotpoegui\\addtaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|solutionrelative:addtaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poefinal\\cyberchatbotpoegui\\addtaskwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|solutionrelative:addtaskwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poefinal\\cyberchatbotpoegui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|c:\\users\\lab_services_student\\desktop\\prog6221_poefinal\\cyberchatbotpoegui\\welcomewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{79F39FAF-73A7-46A3-84DB-0F92BB025723}|CyberChatBotPOEGUI.csproj|solutionrelative:welcomewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,15 +38,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "AddTaskWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\AddTaskWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AddTaskWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\AddTaskWindow.xaml.cs",
+              "RelativeToolTip": "AddTaskWindow.xaml.cs",
+              "ViewState": "AgIAAOQAAACgMjMzMzMWwO8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T19:39:26.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddTaskWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\AddTaskWindow.xaml",
+              "RelativeDocumentMoniker": "AddTaskWindow.xaml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\AddTaskWindow.xaml",
+              "RelativeToolTip": "AddTaskWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-26T19:34:54.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\App.xaml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-26T14:22:41.74Z",
@@ -46,36 +79,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "WelcomeWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\WelcomeWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\WelcomeWindow.xaml.cs",
               "RelativeDocumentMoniker": "WelcomeWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\WelcomeWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\WelcomeWindow.xaml.cs",
               "RelativeToolTip": "WelcomeWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T14:16:45.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "WelcomeWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\WelcomeWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\WelcomeWindow.xaml",
               "RelativeDocumentMoniker": "WelcomeWindow.xaml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\WelcomeWindow.xaml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\WelcomeWindow.xaml",
               "RelativeToolTip": "WelcomeWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-26T14:16:16.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T14:16:16.108Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-26T12:52:17.282Z",
@@ -83,13 +115,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POE\\CyberChatBotPOEGUI\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG6221_POEFINAL\\CyberChatBotPOEGUI\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALkBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAANDMzM7MuwEkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T12:52:13.911Z",
               "EditorCaption": ""
