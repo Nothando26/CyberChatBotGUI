@@ -1,5 +1,7 @@
 # name: Build CyberChatBotGUI
 
+name: .NET Core Desktop
+
 on:
   push:
     branches: [ "main" ]
@@ -8,17 +10,22 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
-
     strategy:
       matrix:
-        configuration: [Release]
+        configuration: [Debug, Release]
+
+    runs-on: windows-latest
+
+    env:
+      Solution_Name: CyberChatBotPOEGUI.sln  # Replace with your actual .sln file name
 
     steps:
-    - name: Checkout repository
+    - name: Checkout
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
-    - name: Setup .NET SDK
+    - name: Install .NET SDK
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
@@ -26,15 +33,14 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
-    - name: Restore dependencies
-      run: msbuild CyberChatBotGUI.sln /t:Restore /p:Configuration=${{ matrix.configuration }}
+    - name: Restore NuGet packages
+      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
+      env:
+        Configuration: ${{ matrix.configuration }}
 
     - name: Build solution
-      run: msbuild CyberChatBotGUI.sln /p:Configuration=${{ matrix.configuration }}
+      run: msbuild $env:Solution_Name /p:Configuration=$env:Configuration
+      env:
+        Configuration: ${{ matrix.configuration }}
 
-    - name: Upload Build Output
-      uses: actions/upload-artifact@v4
-      with:
-        name: BuildOutput
-        path: YourProjectDirectory\bin\Release\
 
